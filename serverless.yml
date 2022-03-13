@@ -1,0 +1,36 @@
+service: nodejs-typescript-serverless-cognito-example
+
+frameworkVersion: '2'
+
+custom:
+  serverless-offline:
+    httpPort: 4000
+    noPrependStageInUrl: true
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+  region: "us-east-1"
+  profile: lambda-authorizer
+
+package:
+  excludeDevDependencies: true
+  #way lambda functions are packed in project
+  individually: true
+
+#setup dotenv usage
+useDotenv: true
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-dotenv-plugin
+  - serverless-offline
+
+functions:
+  api:
+    handler: handler.server
+    events:
+      - http:
+          path: /{proxy+}
+          method: ANY
