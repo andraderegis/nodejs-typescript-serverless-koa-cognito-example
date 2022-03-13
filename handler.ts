@@ -2,7 +2,7 @@ import 'dotenv/config';
 import serverlessExpress from '@vendia/serverless-express';
 import { APIGatewayEvent, Context } from 'aws-lambda';
 
-import app from './infra/server';
+import app from './infra/app';
 
 let serverlessExpressInstance: any;
 

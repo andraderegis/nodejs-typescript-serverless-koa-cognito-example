@@ -1,0 +1,52 @@
+#LOCALHOST
+###
+GET http://localhost:4000/context
+
+###
+POST http://localhost:4000/auth/signup
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.test.cognito",
+  "password": "SnfF+SJ8D?.E[HTF",
+  "email": "gehofa4908@siberpay.com",
+  "name": "Regis Andrade Test Cognito"
+}
+
+###
+POST http://localhost:4000/auth/verify
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.test.cognito",
+  "code": "963828"
+}
+
+###
+POST http://localhost:4000/auth/signin
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.test.cognito",
+  "password": "SnfF+SJ8D?.E[HTf"
+}
+
+###
+POST http://localhost:4000/auth/forgot-password
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.test.cognito"
+}
+
+###
+POST http://localhost:4000/auth/confirm-password
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.test.cognito",
+  "password": "SnfF+SJ8D?.E[HTf",
+  "code": "799823"
+}
+
+#AWS DEPLOYED
