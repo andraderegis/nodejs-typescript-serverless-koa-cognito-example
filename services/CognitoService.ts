@@ -47,8 +47,8 @@ export class CognitoService {
   public async signInUser({ password, username }: SignInParams): Promise<any> {
     const { AuthenticationResult } = await this.cognitoIdentity
       .initiateAuth({
-        AuthFlow: AWSCognitoAuthFlow.UserPasswordAuth /* required */,
-        ClientId: this.clientId /* required */,
+        AuthFlow: AWSCognitoAuthFlow.UserPasswordAuth,
+        ClientId: this.clientId,
         AuthParameters: {
           USERNAME: username,
           PASSWORD: password,
@@ -56,8 +56,6 @@ export class CognitoService {
         }
       })
       .promise();
-
-    console.log(AuthenticationResult);
 
     return AuthenticationResult;
   }

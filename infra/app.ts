@@ -4,7 +4,6 @@ import Router from 'koa-router';
 import koaJson from 'koa-json';
 import koaBody from 'koa-body';
 
-import '../config/environment';
 import { CognitoSettings } from '../config/cognito';
 import { CognitoService } from '../services';
 
