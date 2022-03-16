@@ -8,9 +8,30 @@ Content-Type: application/json
 
 {
   "username": "regis.andrade.test.cognito",
-  "password": "SnfF+SJ8D?.E[HTF",
+  "password": "SnfF+SJ8D?.E[HTf",
   "email": "gehofa4908@siberpay.com",
   "name": "Regis Andrade Test Cognito"
+}
+
+###
+POST http://localhost:4000/auth/signup
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.cognito.admin",
+  "password": "SnfF+SJ8D?.E[HTf",
+  "email": "hanedod530@shopxda.com",
+  "name": "Regis Andrade Cognito Admin"
+}
+###
+POST http://localhost:4000/auth/signup
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.cognito.borrower",
+  "password": "SnfF+SJ8D?.E[HTf",
+  "email": "yoyige9481@sofrge.com",
+  "name": "Regis Andrade Cognito Borrower"
 }
 
 ###
@@ -28,6 +49,15 @@ Content-Type: application/json
 
 {
   "username": "regis.andrade.test.cognito",
+  "password": "SnfF+SJ8D?.E[HTf"
+}
+
+###
+POST http://localhost:4000/auth/signin
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.cognito.admin",
   "password": "SnfF+SJ8D?.E[HTf"
 }
 
@@ -50,3 +80,40 @@ Content-Type: application/json
 }
 
 #AWS DEPLOYED
+###
+POST https://t6ao0fznfk.execute-api.us-east-1.amazonaws.com/dev/auth/signin
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.test.cognito",
+  "password": "SnfF+SJ8D?.E[HTf"
+}
+
+###
+POST https://t6ao0fznfk.execute-api.us-east-1.amazonaws.com/dev/auth/signin
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.cognito.admin",
+  "password": "SnfF+SJ8D?.E[HTf"
+}
+
+###
+POST https://t6ao0fznfk.execute-api.us-east-1.amazonaws.com/dev/auth/signin
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.cognito.borrower",
+  "password": "SnfF+SJ8D?.E[HTf"
+}
+
+###
+GET https://t6ao0fznfk.execute-api.us-east-1.amazonaws.com/dev/context
+Authorization: eyJraWQiOiJOYTU3R085dHF3UmFnbjlrajNqdFBubnowQnF4ckdsOVZxd2ZqMVFpYlAwPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI0OTBjMmY1MC02YTUwLTRlZTctYTZhMy1lNDcxYmY2MTgyZmMiLCJjb2duaXRvOmdyb3VwcyI6WyJib3Jyb3dlciJdLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9IT2JvWHE1aTgiLCJjbGllbnRfaWQiOiI2cXVsNXNmMmVhcDRhbXU4MDk0OGsxbzJnNyIsIm9yaWdpbl9qdGkiOiJhMjRkYTUyOS0xZTdhLTQxMGUtOGM1MS05ZjNmYzE0Zjc2NGIiLCJldmVudF9pZCI6Ijg2MjhlZGI5LTM3MTAtNDk1ZC1iMjY3LWZiMjAzOTE2OTczMCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2NDcyODIxNjIsImV4cCI6MTY0NzI4NTc2MiwiaWF0IjoxNjQ3MjgyMTYyLCJqdGkiOiJiNjExYmUzNS0zNDFmLTRhY2MtOWMzZi1jYTg5ZTAwY2IyZjAiLCJ1c2VybmFtZSI6InJlZ2lzLmFuZHJhZGUudGVzdC5jb2duaXRvIn0.QF2CC2Op9q1IZ_RCe2OpfZlpy13YcUlTBxhjO3Y7RLgQKQeIr3a4pvi9h5GeBcraEEn-wbpKTHkUjhAwSMIjuH2DaHJXBk2jRokMYRJ5UOknBvVL3tKlffzpV9lhFOEcC33PL7aT7kq5b1JpMD6R9SWK82fS6pdfROS9cmrkdHZgK-sNx0hvB6_nXyg4wE3IHip_G1tvSaqLwLyqhzeacG_E0iec8VlgrKpJJ180p-qujUvxP5Q5oa8Lq-gmRm7tir3gkbMslYV6w_Ivv4UNV-HH6wASs0JUYk-4L1KFsA7R80VJ0NEVNJ3_lCrByfbhbrHh9UARSg0gG7AKQ02OFw"
+
+
+
+https://example.com/callback#
+id_token=eyJraWQiOiI5Z2xCcXdDVU9cLzVRYW4wcm11cTNUeGxtMmhWU0hCY0RqdWxSeGp2RFN4ST0iLCJhbGciOiJSUzI1NiJ9.eyJhdF9oYXNoIjoiY2pidzhuU2NyYzhSQ3d6OTBmY2c2ZyIsInN1YiI6IjQ5MGMyZjUwLTZhNTAtNGVlNy1hNmEzLWU0NzFiZjYxODJmYyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9IT2JvWHE1aTgiLCJjb2duaXRvOnVzZXJuYW1lIjoicmVnaXMuYW5kcmFkZS50ZXN0LmNvZ25pdG8iLCJhdWQiOiI2cXVsNXNmMmVhcDRhbXU4MDk0OGsxbzJnNyIsImV2ZW50X2lkIjoiZjczYTI3ODgtYTNmMS00N2UzLWI5YzEtNzcxM2RjY2U0YTYxIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NDcyMTgxMjIsImV4cCI6MTY0NzIyMTcyMiwiaWF0IjoxNjQ3MjE4MTIyLCJqdGkiOiIzNGE2Y2U0YS03Mjk5LTQ5NjMtOWEzYy1hNzNkMGM3MTM5NGQiLCJlbWFpbCI6ImdlaG9mYTQ5MDhAc2liZXJwYXkuY29tIn0.p7ftO16YLShJmYodkjInrWLAue0gNdDNruzYP-HsiJydA92pyoH3L7ip4ZUsIrrRU1xAv2INlE9yEFrIBUpDJ7knh70hBgTR2uxPQzj-jAVmWws7xc0BV6WFPjbP6bjoZzZiX2r5LdivYooInZ5PKLXihhFU7vQrqk8lRfOrflwR68cmIZpMqW1LRQ4ZWWPEFWhMgxL5TLHGGd5TH63BUHrx4JXrPuUUvTZ2brs1Pqk0C5nKkWsKe05YfYloHg7dMuZvC1OlRDskOIyI1B5_ESQ1cyot_yb3RXnbRpeyYdoNGOrgNIGFzrJ-OBOpOBCHdLZYhCdSWdGgZU10J0F7ig
+&access_token=eyJraWQiOiJOYTU3R085dHF3UmFnbjlrajNqdFBubnowQnF4ckdsOVZxd2ZqMVFpYlAwPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI0OTBjMmY1MC02YTUwLTRlZTctYTZhMy1lNDcxYmY2MTgyZmMiLCJldmVudF9pZCI6ImY3M2EyNzg4LWEzZjEtNDdlMy1iOWMxLTc3MTNkY2NlNGE2MSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4gb3BlbmlkIHByb2ZpbGUgZW1haWwiLCJhdXRoX3RpbWUiOjE2NDcyMTgxMjIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX0hPYm9YcTVpOCIsImV4cCI6MTY0NzIyMTcyMiwiaWF0IjoxNjQ3MjE4MTIyLCJ2ZXJzaW9uIjoyLCJqdGkiOiIxZGEzY2Y2MS04OGM4LTQwZmYtYjJhMS00Y2QzYTI4MzAzYmMiLCJjbGllbnRfaWQiOiI2cXVsNXNmMmVhcDRhbXU4MDk0OGsxbzJnNyIsInVzZXJuYW1lIjoicmVnaXMuYW5kcmFkZS50ZXN0LmNvZ25pdG8ifQ.eQc5O-6ly4gTP3oUFRyZp5EfykLR3lHfpIiA7IX8PT-g-rqWgMyac4P91vMWlKn4KayhDhwuh7ly2eLSfDHh0QtOCrO-yO1uar86tohIL6MIOmcZv2j_RsqB8aF0FrxXtH-4UtB58YkV378qWlqV8axRWi9-Qw3LH77cj-8TpqECusOsdrZmFMMmMh13t9FOksROwGVF0k6d6Im5fcpWsTx-pNHFkAnhgIbaFrvln_VjGy8Ohwt7sKl-rPYQwKADEazlEdHq8M1cSmaSLb0M0O68smbex3OQES27RhK0cOxK8aEpkVQBCDFHGCIrJtHI13xe044Th805qZIC8TjPLA
+&expires_in=3600&token_type=Bearer

@@ -13,6 +13,8 @@ provider:
   lambdaHashingVersion: 20201221
   region: "us-east-1"
   profile: lambda-authorizer
+  iam:
+    role: arn:aws:iam::609157373734:role/AWSCustomAuthorizerRole
 
 package:
   excludeDevDependencies: true
@@ -33,4 +35,16 @@ functions:
     events:
       - http:
           path: /{proxy+}
+          method: ANY
+  apiAdmin:
+    handler: handler.server
+    events:
+      - http:
+          path: /admin/{proxy+}
+          method: ANY
+  borrowerAdmin:
+    handler: handler.server
+    events:
+      - http:
+          path: /borrower/{proxy+}
           method: ANY
