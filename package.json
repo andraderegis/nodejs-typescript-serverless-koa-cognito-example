@@ -13,6 +13,7 @@
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "dotenv-safe": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.4",
     "koa-body": "^4.2.0",
     "koa-json": "^2.0.2",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.93",
     "@types/dotenv-safe": "^8.1.2",
+    "@types/jsonwebtoken": "^8.5.8",
     "@types/koa": "^2.13.4",
     "@types/koa-json": "^2.0.20",
     "@types/koa-router": "^7.4.4",

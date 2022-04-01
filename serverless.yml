@@ -36,15 +36,4 @@ functions:
       - http:
           path: /{proxy+}
           method: ANY
-  apiAdmin:
-    handler: handler.server
-    events:
-      - http:
-          path: /admin/{proxy+}
-          method: ANY
-  borrowerAdmin:
-    handler: handler.server
-    events:
-      - http:
-          path: /borrower/{proxy+}
-          method: ANY
+          
