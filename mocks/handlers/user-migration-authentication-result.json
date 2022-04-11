@@ -1,0 +1,24 @@
+{
+  "version": "1",
+  "triggerSource": "UserMigration_Authentication",
+  "region": "us-east-1",
+  "userPoolId": "us-east-1_HOboXq5i8",
+  "userName": "reginaldo.neves",
+  "callerContext": {
+    "awsSdkVersion": "aws-sdk-nodejs-2.1092.0",
+    "clientId": "6qul5sf2eap4amu80948k1o2g7"
+  },
+  "request": { "password": "regis123", "validationData": null, "userAttributes": null },
+  "response": {
+    "userAttributes": {
+      "sub": "6a34a5b9-3264-4b83-b9b2-78baf52d6531",
+      "email": "reginaldo.neves@mutual.club",
+      "email_verified": "true",
+      "username": "reginaldo.neves"
+    },
+    "forceAliasCreation": null,
+    "finalUserStatus": "CONFIRMED",
+    "messageAction": "SUPPRESS",
+    "desiredDeliveryMediums": null
+  }
+}

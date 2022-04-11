@@ -31,9 +31,15 @@ plugins:
 
 functions:
   api:
-    handler: handler.server
+    handler: handlers/api-handler.server
     events:
       - http:
           path: /{proxy+}
           method: ANY
+  
+  userMigration:
+    handler: handlers/user-migration-handler.migration
+  
+  userConfimation:
+    handler: handlers/user-signup-confirmation-handler.confirmation
           

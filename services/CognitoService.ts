@@ -107,6 +107,7 @@ export class CognitoService {
     username
   }: ConfirmNewPasswordParams): Promise<boolean> {
     try {
+      console.log({ code, password, username });
       const data = await this.cognitoIdentity
         .confirmForgotPassword({
           ClientId: this.clientId,
@@ -117,10 +118,10 @@ export class CognitoService {
         })
         .promise();
 
-      console.log(data);
+      console.log('confirmForgotPassword:', data);
       return true;
     } catch (error) {
-      console.log(error);
+      console.log('confirmForgotPassword error:', error);
 
       return false;
     }
