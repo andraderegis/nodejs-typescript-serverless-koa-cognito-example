@@ -3,6 +3,7 @@ export type AWSCognitoSettings = {
   region: string;
   clientId: string;
   secretHash: string;
+  userPoolId: string;
 };
 
 export type SignUpParams = {
@@ -14,6 +15,10 @@ export type SignUpParams = {
 export type SignInParams = {
   username: string;
   password: string;
+};
+
+export type SignOutParams = {
+  accessToken: string;
 };
 
 export type ConfirmSignUpParams = {

@@ -1,5 +1,5 @@
 export const confirmation = event => {
-  console.log({ event: JSON.stringify(event) });
+  console.log({ event });
 
   return event;
 };

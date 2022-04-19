@@ -8,6 +8,7 @@ import {
   ConfirmSignUpParams,
   ForgotPasswordParams,
   SignInParams,
+  SignOutParams,
   SignUpParams
 } from './types';
 
@@ -15,11 +16,13 @@ export class CognitoService {
   private cognitoIdentity: AWS.CognitoIdentityServiceProvider;
   private clientId: string;
   private secretHash: string;
+  private userPoolId: string;
 
   constructor(awsCognitoSettings: AWSCognitoSettings) {
     this.cognitoIdentity = new AWS.CognitoIdentityServiceProvider(awsCognitoSettings);
     this.clientId = awsCognitoSettings.clientId;
     this.secretHash = awsCognitoSettings.secretHash;
+    this.userPoolId = awsCognitoSettings.userPoolId;
   }
 
   public async signUpUser({ password, username, userAttrs }: SignUpParams): Promise<boolean> {
@@ -45,6 +48,13 @@ export class CognitoService {
   }
 
   public async signInUser({ password, username }: SignInParams): Promise<any> {
+    await this.cognitoIdentity
+      .adminUserGlobalSignOut({
+        Username: username,
+        UserPoolId: this.userPoolId
+      })
+      .promise();
+
     const { AuthenticationResult } = await this.cognitoIdentity
       .initiateAuth({
         AuthFlow: AWSCognitoAuthFlow.UserPasswordAuth,
@@ -58,6 +68,25 @@ export class CognitoService {
       .promise();
 
     return AuthenticationResult;
+  }
+
+  public async signOut({ accessToken }: SignOutParams): Promise<any> {
+    try {
+      console.log({ signOut: { accessToken } });
+
+      const response = await this.cognitoIdentity
+        .globalSignOut({
+          AccessToken: accessToken
+        })
+        .promise();
+
+      console.log({ signOutResponse: response });
+
+      return true;
+    } catch (error) {
+      console.log('signOut error:', error);
+      return false;
+    }
   }
 
   public async confirmSignUp({ code, username }: ConfirmSignUpParams): Promise<boolean> {

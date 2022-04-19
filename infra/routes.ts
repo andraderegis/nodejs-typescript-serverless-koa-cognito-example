@@ -8,6 +8,7 @@ import {
   ping,
   signIn,
   signUp,
+  signOut,
   token,
   verify
 } from './controllers';
@@ -19,6 +20,7 @@ appRouter.post('/auth/forgot-password', forgotPassword);
 appRouter.post('/auth/signin', signIn);
 appRouter.post('/auth/signup', signUp);
 appRouter.post('/auth/verify', verify);
+appRouter.post('/auth/signout', signOut);
 appRouter.get('/context', context);
 appRouter.get('/users/:id', getCurrentUserData);
 appRouter.get('/ping', ping);

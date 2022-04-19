@@ -65,12 +65,29 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:4000/admin/auth/signin
+POST http://localhost:4000/auth/signin
 Content-Type: application/json
 
 {
   "username": "regis.andrade.cognito.admin",
   "password": "SnfF+SJ8D?.E[HTf"
+}
+
+###
+POST http://localhost:4000/auth/signin
+Content-Type: application/json
+
+{
+  "username": "regis.andrade.cognito.borrower",
+  "password": "SnfF+SJ8D?.E[HTf"
+}
+
+###
+POST http://localhost:4000/auth/signout
+Content-Type: application/json
+Authorization: Bearer eyJraWQiOiJOYTU3R085dHF3UmFnbjlrajNqdFBubnowQnF4ckdsOVZxd2ZqMVFpYlAwPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyYTRlYWZjMy1kY2ZiLTRjZjAtODQ5Yi04ZDY5NDNlNTZkYjQiLCJjb2duaXRvOmdyb3VwcyI6WyJib3Jyb3dlciJdLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9IT2JvWHE1aTgiLCJjbGllbnRfaWQiOiI2cXVsNXNmMmVhcDRhbXU4MDk0OGsxbzJnNyIsIm9yaWdpbl9qdGkiOiJmYjY0NzE3Yi01NjZlLTQ0ODctODc2Yy01NGVkOGU4YjI1NjYiLCJldmVudF9pZCI6ImRiOTgzNGRlLWQzNjEtNDhhMi05NmZmLWM2NGU2YzI1N2I3NyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2NTAzMDU3ODAsImV4cCI6MTY1MDMwOTM4MCwiaWF0IjoxNjUwMzA1NzgwLCJqdGkiOiI4NjBiYWUzMS04Mjk3LTRiZDItYTcwNS01YjkyMzU1YmZmNzUiLCJ1c2VybmFtZSI6InJlZ2lzLmFuZHJhZGUuY29nbml0by5ib3Jyb3dlciJ9.AQec2bsS7CbBl924t6Y7EVq4qCqvg7UpdCLNle7sPGyRBFd5dBKCGOqVAeH3jTamU3uoCA563suodLrraQN4-IHO6h5vpWIMqRYvmqb8r5nqcrFgR1JHc55SGg4c41OBp7bqZC9X8iJfTUpfc_F8nPT6goZDShgdl-iPJ1RtWldOZBKrCDp_0_2iZRIXLz5mc3mT1k9_eWJyj-0B7fi4lr9jdQc3sCHPwjKMCDofThQnGyfRy-k5xlnVJfqRNMUvza2xnIuDgpY4a8awgedUUhEd8y35guIrrIVH-43KZNau9DLloYOl-PVp52w2RulWd_7EDL8RQLhM_DOz8hVnUg
+
+{
 }
 
 ###

@@ -92,6 +92,22 @@ export const signIn = async (ctx: Context) => {
   }
 };
 
+export const signOut = async (ctx: Context) => {
+  try {
+    const [, accessToken] = ctx.header.authorization.split(' ');
+
+    const result = await cognitoService.signOut({
+      accessToken
+    });
+
+    ctx.status = 200;
+    ctx.body = response(200, { ...result });
+  } catch (error) {
+    ctx.status = 400;
+    ctx.body = response(400, null, error);
+  }
+};
+
 export const verify = async (ctx: Context) => {
   const { username, code } = ctx.request.body;
 
